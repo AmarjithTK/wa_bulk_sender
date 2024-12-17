@@ -27,19 +27,26 @@ client.on('ready', () => {
 
     // Example parameters for testing
     getUserInput().then((filePath) => {
-        const message = `നിങ്ങൾ ഒരു യോഗ ട്രെയിനർ ആണോ, അല്ലെങ്കിൽ ട്രെയിനർ ആവാൻ ആഗ്രഹമൊണ്ടോ? ഒരു ഗവൺമെൻറ് സർട്ടിഫൈഡ് ട്രെയിനർ ആവൂ
+        const message = `
+        
+        നിങ്ങൾ ഒരു യോഗ ട്രെയിനർ ആണോ, അല്ലെങ്കിൽ ട്രെയിനർ ആവാൻ ആഗ്രഹമൊണ്ടോ? ഒരു ഗവൺമെൻറ് സർട്ടിഫൈഡ് ട്രെയിനർ ആവൂ
 Become a Certified Yoga Professional from Ministry of AYUSH, Govt.of India 
 ഇന്ത്യാ ഗവൺമൻ്റിനു കീഴിൽ ആയുഷ് മന്ത്രാലയത്തിൻ്റെ യോഗ സർട്ടിഫിക്കേഷൻ നേടാൻ അവസരം.
-Never miss the chance to get international certified as  Yoga Trainer from Government of India
+Never miss the chance to get internationally certified as  Yoga Trainer from Government of India
 താല്പര്യമുള്ളവർ വാട്സാപ്പിൽ ജോയിൻ ചെയ്യുക 
  WhatsApp group: https://chat.whatsapp.com/HLiXu7CtsGECDvom1iNIDe
-സർട്ടിഫിക്കേഷൻ, പരീക്ഷാ ഫീസ്, സിലബസ്, മറ്റെല്ലാ വിവരങ്ങളും അറിയാൻ സൗജന്യ സെഷൻ സഹായിക്കും. ഉടനടി രജിസ്റ്റർ ചെയ്യുക.
+സർട്ടിഫിക്കേഷൻ, പരീക്ഷാ ഫീസ്, സിലബസ്, മറ്റെല്ലാ വിവരങ്ങളും അറിയാൻ ഉടനടി വാട്സാപ്പിൽ ജോയിൻ ചെയ്യുക. 
 ശ്രദ്ധിക്കുക 
 #  Level 1, Level 2 and Level 3 സർട്ടിഫിക്കേഷൻസ്.
 #  ഓൺലൈൻ പരീക്ഷകൾ (തിയറി/ പ്രാക്ടിക്കൽ)
 # പൂർണ്ണമായും മലയാളത്തിൽ അറ്റൻഡ് ചെയ്യാം
 #  പരീക്ഷയ്ക്ക് വേണ്ടിയുള്ള സ്പെഷ്യൽ ട്രെയിനിംഗ് സെഷനിൽ പങ്കെടുക്കാം.
-# സീറ്റുകൾ പരിമിതം`;
+# സീറ്റുകൾ പരിമിതം
+        
+        
+        
+        
+        `;
         const imagePath = './assets/image.jpg'; // Default image path if needed
         const interval = 7000; // Interval in milliseconds (e.g., 30000ms = 30 seconds)
 
@@ -68,7 +75,8 @@ function readExcel(filePath) {
 }
 
 // Function to send messages periodically with an optional image
-async function sendMessages(numbers, message, imagePath, interval) {
+// Function to send messages periodically with an optional image
+async function sendMessages(numbers, message, imagePath) {
     let media = null;
     let logs = []; // Array to store log entries
 
@@ -105,8 +113,12 @@ async function sendMessages(numbers, message, imagePath, interval) {
             logs.push(`Failed to send message to ${number.phone}: ${error.message}`);
         }
 
-        // Wait for the specified interval before sending the next message
-        await new Promise((resolve) => setTimeout(resolve, interval));
+        // Calculate a random timeout between 10 and 35 seconds
+        const randomTimeout = Math.floor(Math.random() * (35 - 10 + 1) + 10) * 1000; // Random interval in milliseconds
+        console.log(`Waiting for ${randomTimeout / 1000} seconds before sending the next message...`);
+
+        // Wait for the random timeout before sending the next message
+        await new Promise((resolve) => setTimeout(resolve, randomTimeout));
     }
 
     console.log('Finished sending messages.');
