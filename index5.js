@@ -30,7 +30,7 @@ client.on('ready', () => {
         const message = `നിങ്ങൾ ഒരു യോഗ ട്രെയിനർ ആണോ, അല്ലെങ്കിൽ ട്രെയിനർ ആവാൻ ആഗ്രഹമൊണ്ടോ? ഒരു ഗവൺമെൻറ് സർട്ടിഫൈഡ് ട്രെയിനർ ആവൂ
 Become a Certified Yoga Professional from Ministry of AYUSH, Govt.of India 
 ഇന്ത്യാ ഗവൺമൻ്റിനു കീഴിൽ ആയുഷ് മന്ത്രാലയത്തിൻ്റെ യോഗ സർട്ടിഫിക്കേഷൻ നേടാൻ അവസരം.
-Never miss the chance to get internationally certified as  Yoga Trainer from Government of India
+Never miss the chance to get international certified as  Yoga Trainer from Government of India
 താല്പര്യമുള്ളവർ വാട്സാപ്പിൽ ജോയിൻ ചെയ്യുക 
  WhatsApp group: https://chat.whatsapp.com/HLiXu7CtsGECDvom1iNIDe
 സർട്ടിഫിക്കേഷൻ, പരീക്ഷാ ഫീസ്, സിലബസ്, മറ്റെല്ലാ വിവരങ്ങളും അറിയാൻ സൗജന്യ സെഷൻ സഹായിക്കും. ഉടനടി രജിസ്റ്റർ ചെയ്യുക.
